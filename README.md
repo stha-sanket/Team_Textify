@@ -1,6 +1,6 @@
-# Streamlit Document Processing Hub (OCR & Classifier)
+# Team_Textify: Document Classification and Text Extraction
 
-This Streamlit application provides a web-based interface for two document processing tasks:
+This application provides a web-based interface for two document processing tasks:
 1.  **Nepali/English OCR**: Extracts text from uploaded images containing Nepali and English script using Tesseract OCR.
 2.  **Document Classifier**: Predicts the type of an uploaded document image (Birth Certificate, Blank, Citizenship, NID, PAN) using a pre-trained TensorFlow/Keras model (fine-tuned MobileNetV2). It also includes a feedback mechanism to improve future model iterations.
 
@@ -30,11 +30,6 @@ The application is built using Streamlit's native multi-page feature, allowing e
 *   Uses Streamlit Session State to maintain prediction results and feedback state during user interaction.
 *   Provides an expandable section to view the contents of the `feedback_log.csv`.
 
-**General:**
-*   Multi-page application structure with a sidebar for navigation.
-*   Clear separation of concerns between the OCR and Classifier functionalities.
-*   Uses caching (`st.cache_resource`) for efficient model loading.
-
 ## Project Structure
 my_multipage_app/
 ├── Home.py # Main landing/welcome page script
@@ -63,7 +58,6 @@ my_multipage_app/
     git clone <your-repository-url> # If using Git
     cd my_multipage_app
     ```
-    Or download the code and extract it into a directory named `my_multipage_app`.
 
 2.  **Place Model File:**
     *   Ensure the pre-trained model file `my_image_classifier_model.keras` is placed directly inside the `my_multipage_app` directory (one level above the `pages` directory).
@@ -96,24 +90,3 @@ my_multipage_app/
     *   Install the requirements:
       ```bash
       pip install -r requirements.txt
-      ```
-
-## Usage
-
-1.  **Navigate to the project directory** in your terminal (the `my_multipage_app` directory where `Home.py` is located).
-2.  **Ensure your virtual environment** (if created) is activated.
-3.  **Run the Streamlit application:**
-    ```bash
-    streamlit run Home.py
-    ```
-4.  Streamlit will open the application in your default web browser.
-5.  Use the sidebar on the left to navigate between the "Home", "📄 OCR", and "🖼️ Classifier" pages.
-6.  Follow the instructions on each page to upload images and use the tools.
-
-## Configuration Notes
-
-*   **Model Path:** The classifier script (`pages/2_🖼️_Classifier.py`) expects the model file at `../my_image_classifier_model.keras` (relative to the script inside `pages`). If you place the model elsewhere, update the `MODEL_PATH` variable in that script.
-*   **Tesseract Path:** As mentioned, if Tesseract isn't in your system's PATH, you must set the `pytesseract.pytesseract.tesseract_cmd` variable in `pages/1_📄_OCR.py`.
-*   **Feedback File:** The feedback log is saved to `feedback_log.csv` in the main project directory by default. This path can be changed via the `FEEDBACK_LOG_FILE` constant in `pages/2_🖼️_Classifier.py`.
-*   **Classifier Classes:** The `CLASS_NAMES` list in `pages/2_🖼️_Classifier.py` must exactly match the order of classes the Keras model was trained on.
-*   **Image Dimensions:** The classifier expects images to be resized to `224x224` (defined by `IMG_WIDTH`, `IMG_HEIGHT`). This is handled automatically during preprocessing.
