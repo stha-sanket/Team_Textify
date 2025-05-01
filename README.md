@@ -92,3 +92,15 @@ my_multipage_app/
     *   Install the requirements:
       ```bash
       pip install -r requirements.txt
+      ```
+      ---------
+    ## Contributors
+
+Thanks to these amazing people:
+-Samikshya Dhamala [@samikshyadhamala](https://github.com/samikshyadhamala)
+-Sanket Shrestha [@stha-sanket ](@https://github.com/stha-sanket)
+-Shreya Bhatta[@shreyabhatta17](https://github.com/shreyabhatta17)
+-Unika Ghimire[@UnikaGhimire](https://github.com/UnikaGhimire)
+-Yug Adhikari[@Yug78-ops](https://github.com/Yug78-ops)
+
+
