@@ -31,7 +31,8 @@ The application is built using Streamlit's native multi-page feature, allowing e
 *   Provides an expandable section to view the contents of the `feedback_log.csv`.
 
 ## Project Structure
-` my_multipage_app/
+``` bash
+my_multipage_app/
 ├── Home.py # Main landing/welcome page script
 ├── pages/
 │ ├── 1_📄_OCR.py # Script for the OCR tool page
@@ -39,7 +40,7 @@ The application is built using Streamlit's native multi-page feature, allowing e
 ├── my_image_classifier_model.keras # Trained Keras model file for the classifier
 ├── feedback_log.csv # CSV file where classifier feedback is stored (created automatically)
 ├── requirements.txt # Python dependencies
-└── README.md # This file `
+└── README.md # This file ```
 
 ## Prerequisites
 
