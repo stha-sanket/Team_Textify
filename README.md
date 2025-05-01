@@ -40,7 +40,8 @@ my_multipage_app/
 ├── my_image_classifier_model.keras # Trained Keras model file for the classifier
 ├── feedback_log.csv # CSV file where classifier feedback is stored (created automatically)
 ├── requirements.txt # Python dependencies
-└── README.md # This file ```
+└── README.md # This file
+```
 
 ## Prerequisites
 
