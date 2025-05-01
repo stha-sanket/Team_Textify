@@ -1,0 +1,3 @@
+Timestamp,Filename,PredictedClass,Confidence,WasCorrect,UserCorrectLabel,Score_Birth Certificate,Score_Blank,Score_Citizenship,Score_NID,Score_PAN
+2025-05-01 17:46:03,228_inpainted.png,PAN,40.43%,True,N/A,14.89%,14.89%,14.89%,14.89%,40.43%
+2025-05-01 17:56:41,228_inpainted.png,PAN,40.43%,True,N/A,14.89%,14.89%,14.89%,14.89%,40.43%
